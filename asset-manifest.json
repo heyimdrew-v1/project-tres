@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/project-tres/static/css/main.e6c13ad2.css",
+    "main.js": "/project-tres/static/js/main.f09dae64.js",
+    "static/js/592.e3fbfe8d.chunk.js": "/project-tres/static/js/592.e3fbfe8d.chunk.js",
+    "index.html": "/project-tres/index.html",
+    "main.e6c13ad2.css.map": "/project-tres/static/css/main.e6c13ad2.css.map",
+    "main.f09dae64.js.map": "/project-tres/static/js/main.f09dae64.js.map",
+    "592.e3fbfe8d.chunk.js.map": "/project-tres/static/js/592.e3fbfe8d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.f09dae64.js"
+  ]
+}
