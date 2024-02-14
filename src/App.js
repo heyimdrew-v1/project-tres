@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [username, setUsername] = useState('');
+  const [message, setMessage] = useState('');
+  const [backgroundColor, setBackgroundColor] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (username === 'JSmith23') {
+      setBackgroundColor('green');
+      setMessage(`Welcome, ${username}`);
+    } else {
+      setBackgroundColor('red');
+      setMessage('User not found');
+    }
+  };
+
+  const handleChange = (event) => {
+    setUsername(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor, minHeight: '100vh', padding: '20px' }}>
+      <h1>Please Login</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Username:
+          <input type="text" value={username} onChange={handleChange} />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+      <p>{message}</p>
     </div>
   );
 }
